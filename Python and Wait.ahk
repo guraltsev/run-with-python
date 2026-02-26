@@ -39,7 +39,7 @@ for arg in scriptArgs {
 }
 
 ; Run the Python script and keep the terminal open
-RunWait(A_ComSpec . " /c \"" . pythonCommand . " & echo. & pause\"")
+RunWait(A_ComSpec . ' /c "' . pythonCommand . ' & echo. & pause"')
 
 ExitApp
 
