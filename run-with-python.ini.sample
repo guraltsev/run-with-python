@@ -1,0 +1,4 @@
+[run-with-python]
+; Full path to python.exe.
+; If this file exists and python_path is set, it overrides PATH lookup.
+python_path=C:\\Python311\\python.exe
