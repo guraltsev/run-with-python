@@ -38,8 +38,13 @@ for arg in scriptArgs {
     pythonCommand .= " " . QuoteArg(arg)
 }
 
+SplitPath(scriptPath, , &scriptDir)
+if (scriptDir = "") {
+    scriptDir := A_WorkingDir
+}
+
 ; Run the Python script and keep the terminal open
-RunWait(A_ComSpec . ' /c "' . pythonCommand . ' & echo. & pause"')
+RunWait(A_ComSpec . ' /c "' . pythonCommand . ' & echo. & pause"', scriptDir)
 
 ExitApp
 

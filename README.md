@@ -35,7 +35,7 @@ If the file exists and `python_path` is set, that path is used and PATH-based de
 
 - This launcher is Windows-only (AutoHotkey).
 - It opens a console window for each run by design.
-- It does not set a specific working directory; Python runs in the process default working directory.
+- It sets the working directory to the launched script's folder before starting Python.
 - It does not currently support drag-and-drop multiple files in a single launch.
 
 ## Critique of this approach
